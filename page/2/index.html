@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>水立方技术站 - ApplEE</title><meta name="author" content="夏铭禹"><meta name="copyright" content="夏铭禹"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
+<meta property="og:title" content="水立方技术站">
+<meta property="og:url" content="http://qsctech-watercube.github.io/blog/page/2/index.html">
+<meta property="og:site_name" content="水立方技术站">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://qsctech-watercube.github.io/blog/null">
+<meta property="article:author" content="夏铭禹">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qsctech-watercube.github.io/blog/null"><link rel="shortcut icon" href="/qsctech-watercube.github.io/img/favicon.png"><link rel="canonical" href="http://qsctech-watercube.github.io/blog/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/qsctech-watercube.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/qsctech-watercube.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2020-10-29 22:34:39'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/qsctech-watercube.github.io/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/qsctech-watercube.github.io/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/qsctech-watercube.github.io/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/"><i class="fa-fw fas fa-home"></i><span> Homes</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/qsctech-watercube.github.io/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/qsctech-watercube.github.io/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/qsctech-watercube.github.io/gallery/"><i class="fa-fw fas fa-images"></i><span> Gallery</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/qsctech-watercube.github.io/">水立方技术站</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/"><i class="fa-fw fas fa-home"></i><span> Homes</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/qsctech-watercube.github.io/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/qsctech-watercube.github.io/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/qsctech-watercube.github.io/gallery/"><i class="fa-fw fas fa-images"></i><span> Gallery</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">水立方技术站</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/qsctech-watercube.github.io/MacBook%E5%BD%BB%E5%BA%95%E7%A7%BB%E9%99%A4Windows%E7%B3%BB%E7%BB%9F%E5%88%86%E5%8C%BA.html" title="MacBook彻底移除Windows系统分区">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/macbook bootcamp.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="MacBook彻底移除Windows系统分区"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/MacBook%E5%BD%BB%E5%BA%95%E7%A7%BB%E9%99%A4Windows%E7%B3%BB%E7%BB%9F%E5%88%86%E5%8C%BA.html" title="MacBook彻底移除Windows系统分区">MacBook彻底移除Windows系统分区</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-21T04:03:10.000Z" title="发表于 2019-11-21 12:03:10">2019-11-21</time></span></div><div class="content">前言由于之前总是解决这个问题，因此在这写一个教程省去我重复一步步引导的时间MacBook装了window10 之后 玩游戏很卡想卸载window10，然后发现bootCamp中原有的卸载window的选项无法选中解决办法：通过磁盘工具，删除磁盘中的内容并合并分区。
+查看分区在launchpad里找到终端，打开在终端中输入diskutil list可以看到当前磁盘中的所有分区
+磁盘工具找到应用程序：磁盘工具通过磁盘工具-&gt;分区 “+” “-” 来添加或减少分区
+Q&amp;A分区中有一个16.8M 的分区没有名称用不显示 在当前磁盘分区目录下，无法将他格式化成FAT 格式，
+
+解决办法 终端执行 sudo diskutil eraseVolume JHFS+ deleteme /dev/disk0s4 给这个磁盘命名 其中 disk0s4 是这个16.8M的分区在磁盘中的 IDENTIFIER（在分区列表中有）然后在使用磁盘工具 将这个命名为 deleteme 的分区格式化 成FAT
+
+最后通过磁盘工具中的分区 选中饼状图 在下面选择 “-” 合并分区 —- 应用
+有问题可以联系Q ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/qsctech-watercube.github.io/%E6%9D%A5%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%E5%90%A7%EF%BC%81.html" title="来搭建图床吧！">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCTech-Sange/picBed/JsDelivr.webp" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="来搭建图床吧！"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/%E6%9D%A5%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%E5%90%A7%EF%BC%81.html" title="来搭建图床吧！">来搭建图床吧！</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-20T04:34:37.000Z" title="发表于 2019-11-20 12:34:37">2019-11-20</time></span></div><div class="content">思路因为免费图床七牛并不稳，因此转用了使用Github + jsDelivr + vs picGo 来搭建自己的图床。其中，Github存放数据，jsDelivr 进行CDN加速，而picGo 是一个vs code 的插件，为了方便上传图片。
+GitHubGithub在图床里，毫无疑问是扮演一个“仓库”的角色。
+
+我们需要新建一个仓库，别的随便写，注意权限要选择public。
+在自己的个人账户的settings里，找到左侧最下方的Developer settings。找到Personal access tokens。在右侧点击Generate new token。
+这里名字可以随便写，后面的范围把repo勾选即可。（它的子类会自动被勾选）。记下来生成好的token。这一步的目的是生成一个能代表你身份的token，然后交给picgo，使得它能替你上传图片，不用繁琐地再通过git commit 操作。
+在你的这个仓库里，点击 releases。接着点击旁边的Draft New Release，里面随便填，最后点Publish release。这一步是发布一个版本的意思，我们的jsDeliv ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/qsctech-watercube.github.io/Matlab%E5%88%86%E6%9E%90%E4%BF%A1%E5%8F%B7%E7%9A%84ADC%E5%92%8CDAC%E8%BF%87%E7%A8%8B.html" title="Matlab分析信号的ADC和DAC过程">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/Matlab.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="Matlab分析信号的ADC和DAC过程"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/Matlab%E5%88%86%E6%9E%90%E4%BF%A1%E5%8F%B7%E7%9A%84ADC%E5%92%8CDAC%E8%BF%87%E7%A8%8B.html" title="Matlab分析信号的ADC和DAC过程">Matlab分析信号的ADC和DAC过程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-19T07:38:35.000Z" title="发表于 2019-11-19 15:38:35">2019-11-19</time></span></div><div class="content">前言本文讲解如何利用Matlab程序对一段信号进行模数转化（ADC）和数模转化（DAC）处理。
+理论基础首先我们了解一下数据的概念数据是事实或观察的结果，是对客观事物的逻辑归纳和符号表示，是信息的表现形式和载体，可以是符号、文字、数字、语音、图像、视频等。
+
+数据可以是连续的值，比如声音、图像，称为模拟数据。也可以是离散的，如符号、文字，称为数字数据。
+在计算机系统中，用有限个二进制代码 (0 和 1) 来表示字符、图形、 音频与视频数据等。
+模拟数据是用连续变化的数值来表示要说明的信息，通常用各种测量单位表示，例如温度、压力、身高、体重、说话的声音等。模拟数据经量化后得到离散的值，也即转化为数字数据。连续信号和离散信号连续信号：– 随坐标变量连续变化的信号离散信号：– 仅在某些坐标变量的离散点上有值的信号模拟信号
+模拟信号：模拟信号是指信息参数在给定范围内表现为连续的信号，或在一段连续的时间间隔内，其代表信息的特征量可以在任意瞬间呈现为任意数值的信号，它在一定的时间范围内可以有无限多个不同的取值。
+我们可以感知的，在时间和幅值上都是连续的物理量，如温度、湿度、 压力、长度等等，都是模 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/qsctech-watercube.github.io/Matlab%E5%AE%9E%E7%8E%B0%E6%BB%A4%E6%B3%A2%E5%99%A8.html" title="Matlab实现滤波器">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/Matlab.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="Matlab实现滤波器"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/Matlab%E5%AE%9E%E7%8E%B0%E6%BB%A4%E6%B3%A2%E5%99%A8.html" title="Matlab实现滤波器">Matlab实现滤波器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-12T15:55:43.000Z" title="发表于 2019-11-12 23:55:43">2019-11-12</time></span></div><div class="content">前言Tips：冬学期手痒，选了信息与电子工程导论，这门课用Matlab作为编程语言，那么我就随着进程更新一下学到的东西叭。
+本文讲解如何利用Matlab程序对一段语音进行低通和高通滤波处理。以下为Matlab代码
+% Read the voice file.[x1,fs] = audioread(&#x27;segment2.mp3&#x27;);%Convert the voice from double channels to single channel.if length(size(x1))&gt;1    x1 = x1(:,1);end;%Plot the voice waveform in the time and frequency domains. figure(1);plot(x1);title(&#x27;The voice in the time domain&#x27;);xlabel(&#x27;Time(second)&#x27;);ylabel(&#x27;Amplitude&#x27;);figure(2);y1 = fft(x1);y1 = ffts ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/qsctech-watercube.github.io/Apple%E7%94%9F%E6%80%81%E9%93%BE%E5%AE%9E%E7%8E%B0%E6%A8%A1%E6%8B%9F%E5%AE%9A%E4%BD%8D.html" title="Apple生态链实现模拟定位">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/xcode.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="Apple生态链实现模拟定位"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/Apple%E7%94%9F%E6%80%81%E9%93%BE%E5%AE%9E%E7%8E%B0%E6%A8%A1%E6%8B%9F%E5%AE%9A%E4%BD%8D.html" title="Apple生态链实现模拟定位">Apple生态链实现模拟定位</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-04T02:00:55.000Z" title="发表于 2019-11-04 10:00:55">2019-11-04</time></span></div><div class="content">本文介绍如何使用Macbook+iPhone/iPad实现模拟定位
+前期准备本文介绍的方法需要使用
+
+macOS下的Xcode（在AppStore搜索“Xcode”下载安装，下文以电脑代指）
+能到iOS13的iPhone/iPad一台及数据线（下文以“手机”表示）
+一个Apple ID完成连接
+将手机用数据线和电脑连起来（可能需要转接头，不作赘述），在手机上信任此电脑
+在电脑上打开Xcode，点击Create a new project，在iOS栏目下选择Single View App，点击Next（图）
+Product Name随便写
+
+
+
+11.13号更新：一直没写是因为我的Xcode出现了字体模糊的问题，试过重装/重启/打电话给客服/对话米国开发者/Genius bar，结果让我等通知。（脏话）于是我今天在“developer.apple.com”下载了老版本Xcode10.3 解决问题了（雾（这就不适配了啊喂）不管，至少Xcode能用（然后现在手头没有对应版本的手机了，于是继续搁置（发出了🐦咕咕咕的声音
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/qsctech-watercube.github.io/python%E5%85%A5%E9%97%A8.html" title="python入门">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/7974234FBBEF1AE0149868371CF77551.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="python入门"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/python%E5%85%A5%E9%97%A8.html" title="python入门">python入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-27T14:16:32.000Z" title="发表于 2019-10-27 22:16:32">2019-10-27</time></span></div><div class="content">在“python简介”中，我们已经大致了解了python，那么我们这次学一些基础的东西。学完这篇教程就达到计算机科学基础（B）要求的python编程水平啦！
+基本数据类型在python中，我们有以下数据类型：整数、浮点数、复数。
+整数&gt;&gt;&gt;6666&gt;&gt;&gt;-175-175&gt;&gt;&gt;07SyntaxError: invalid token&gt;&gt;&gt;0
+二进制，八进制，十六进制0b或0B 代表二进制0o或0O 代表八进制0x 或0X 代表十六进制
+&gt;&gt;&gt;0b102&gt;&gt;&gt;0o108&gt;&gt;&gt;0x1016
+整数可以表示很大的数&gt;&gt;&gt;google=10**50&gt;&gt;&gt;google100000000000000000000000000000000000000000000000000
+运算符+ 加法      5+10=15
+-  减法      100-5=95
+* 乘法      8*9=72
+/   浮点数除法 100/5=20.0
+//  整数除法 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/qsctech-watercube.github.io/python%E7%AE%80%E4%BB%8B.html" title="python简介">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/7974234FBBEF1AE0149868371CF77551.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="python简介"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/python%E7%AE%80%E4%BB%8B.html" title="python简介">python简介</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-21T08:46:57.000Z" title="发表于 2019-10-21 16:46:57">2019-10-21</time></span></div><div class="content">前言思来想去，我好像还没有什么能教给大家的，毕竟我本人很菜（雾那就写一点面向0基础的code learner的python学习指南，学完大概能达到–看得懂别人代码的水平？（雾毕竟编程/代码是拿来用的，不是用来学的（？表意不清，先在这挖个坑，以后再来填。
+从计算机开始我不知道要不要讲二进制、八进制、十进制和十六进制，自行搜索叭。（雾ASCⅡ码、Unicode码、UTF-8码同理。  
+计算机分为软件和硬件（挖个坑 待会用图解释
+硬件硬件又分为主机和外部设备比如上图中就是显示屏和主机一体机，屏幕和鼠标都是外部设备。
+存储单位！！需要图
+操作系统操作系统（Operating System，简称OS）是管理和控制计算机软件与硬件资源的计算机程序，是直接运行在“裸机”上的最基本的系统软件常见的操作系统：Unix/Linux、Windows、Mac OS
+程序设计语言机器语言、汇编语言、高级语言、C/C++、Java、Python
+Python语言简介Python是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/qsctech-watercube.github.io/%E5%8F%88%E6%98%AF%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9.html" title="又是新的一天">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/%E7%BD%AE%E9%A1%B6%E5%9B%BE.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="又是新的一天"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/%E5%8F%88%E6%98%AF%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9.html" title="又是新的一天">又是新的一天</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-21T06:12:32.000Z" title="发表于 2019-10-21 14:12:32">2019-10-21</time></span></div><div class="content">大家好，我是水立方。以下是我的自我介绍恶老板
+现在是2019年10月10号23:20我坐在杭州飞往广州的飞机上。每当我处于这种没有网络，或者对我这种现代人来说无异于与世隔绝的时候，我就想打开电脑写点什么。可能是在向外界汲取东西的长久日子里，终于有了一丝空闲时间吧，难得的，用来向外输出文字与情感的时间。
+本来觉着趁着互联网➕的假期往外跑一趟是一个很合理且利大于弊的决定。可真的到了日子临近了，一堆会议啊内训啊涌上来的时候，又重新进行了考量，可又怎样呢，我不一直是那种想到就去做的人么。
+可能还是对自己的定位不够清晰吧，不知道自己想要什么。放在一年前半年前倒还好，没有那么多选择，人也懵懂无知，就只能想到学习啊玩啊谈恋爱啊。不过再过两年回头看呢，会不会也萌生出和现在一样的想法呢，懵懂无知，拎不清是非。也可能是当下我可选择的东西太多了，以至于我没有办法去做出精确的决定，我总想着再走着看，再体验一下，可这毕竟不是长久之计呀。我今天就趁着这个机会把这些可能性罗列一番，看看利弊。
+好好学习，刷刷绩点，考个托福/雅思然后去申请国外的学校这是我选择了降级的初衷，毕竟原来的成绩不尽人意。现在看来，虽然这条路看 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/qsctech-watercube.github.io/hello-world.html" title="Hello World">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/hello-world.html" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-20T06:11:01.356Z" title="发表于 2019-10-20 14:11:01">2019-10-20</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server$ hexo server
+
+More info: Server
+Generate static files$ hexo generate
+
+More info: Generating
+Deploy to remote sites$ hexo deploy
+
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/qsctech-watercube.github.io/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/qsctech-watercube.github.io/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/qsctech-watercube.github.io/null" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">夏铭禹</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/qsctech-watercube.github.io/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div><div class="card-info-data-item is-center"><a href="/qsctech-watercube.github.io/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E8%B0%88InitPieVectTable%E5%87%BD%E6%95%B0.html" title="谈InitPieVectTable()函数"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="谈InitPieVectTable()函数"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E8%B0%88InitPieVectTable%E5%87%BD%E6%95%B0.html" title="谈InitPieVectTable()函数">谈InitPieVectTable()函数</a><time datetime="2020-10-29T12:59:57.000Z" title="发表于 2020-10-29 20:59:57">2020-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%AD%A3%E7%BB%8F%E8%AE%A1%E5%88%92.html" title="正经计划"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="正经计划"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%AD%A3%E7%BB%8F%E8%AE%A1%E5%88%92.html" title="正经计划">正经计划</a><time datetime="2020-10-29T07:33:22.000Z" title="发表于 2020-10-29 15:33:22">2020-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%96%B0%E6%A6%82%E5%BF%B5%E6%A0%A1%E8%BD%A6.html" title="新概念校车"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="新概念校车"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%96%B0%E6%A6%82%E5%BF%B5%E6%A0%A1%E8%BD%A6.html" title="新概念校车">新概念校车</a><time datetime="2020-10-19T01:49:17.000Z" title="发表于 2020-10-19 09:49:17">2020-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B7Openwrt%E4%BD%9C%E8%BD%AF%E8%B7%AF%E7%94%B1.html" title="树莓派3B+刷Openwrt作软路由"><img src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/RaspberryPi.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="树莓派3B+刷Openwrt作软路由"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B7Openwrt%E4%BD%9C%E8%BD%AF%E8%B7%AF%E7%94%B1.html" title="树莓派3B+刷Openwrt作软路由">树莓派3B+刷Openwrt作软路由</a><time datetime="2020-09-28T02:50:22.000Z" title="发表于 2020-09-28 10:50:22">2020-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E5%88%86%E4%BA%ABMacBook%E7%9A%84%E7%BB%88%E7%AB%AF%EF%BC%88Terminal%EF%BC%89%E7%BE%8E%E5%8C%96.html" title="分享MacBook的终端（Terminal）美化"><img src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/925-1.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="分享MacBook的终端（Terminal）美化"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E5%88%86%E4%BA%ABMacBook%E7%9A%84%E7%BB%88%E7%AB%AF%EF%BC%88Terminal%EF%BC%89%E7%BE%8E%E5%8C%96.html" title="分享MacBook的终端（Terminal）美化">分享MacBook的终端（Terminal）美化</a><time datetime="2020-09-25T02:39:50.000Z" title="发表于 2020-09-25 10:39:50">2020-09-25</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/qsctech-watercube.github.io/tags/MacBook/" style="font-size: 1.3em; color: #99a1ac">MacBook</a> <a href="/qsctech-watercube.github.io/tags/Matlab/" style="font-size: 1.5em; color: #99a9bf">Matlab</a> <a href="/qsctech-watercube.github.io/tags/Unity/" style="font-size: 1.1em; color: #999">Unity</a> <a href="/qsctech-watercube.github.io/tags/daily-plans/" style="font-size: 1.1em; color: #999">daily plans</a> <a href="/qsctech-watercube.github.io/tags/iOS/" style="font-size: 1.3em; color: #99a1ac">iOS</a> <a href="/qsctech-watercube.github.io/tags/javascript/" style="font-size: 1.1em; color: #999">javascript</a> <a href="/qsctech-watercube.github.io/tags/l2tp/" style="font-size: 1.1em; color: #999">l2tp</a> <a href="/qsctech-watercube.github.io/tags/openwrt/" style="font-size: 1.1em; color: #999">openwrt</a> <a href="/qsctech-watercube.github.io/tags/python/" style="font-size: 1.3em; color: #99a1ac">python</a> <a href="/qsctech-watercube.github.io/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.1em; color: #999">图床</a> <a href="/qsctech-watercube.github.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 1.3em; color: #99a1ac">树莓派</a> <a href="/qsctech-watercube.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 1.1em; color: #999">科学上网</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">4</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">19</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-10-29T14:34:39.081Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By 夏铭禹</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/qsctech-watercube.github.io/js/utils.js"></script><script src="/qsctech-watercube.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>

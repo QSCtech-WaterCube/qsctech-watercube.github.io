@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>水立方技术站 - ApplEE</title><meta name="author" content="夏铭禹"><meta name="copyright" content="夏铭禹"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
+<meta property="og:title" content="水立方技术站">
+<meta property="og:url" content="http://qsctech-watercube.github.io/blog/index.html">
+<meta property="og:site_name" content="水立方技术站">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://qsctech-watercube.github.io/blog/null">
+<meta property="article:author" content="夏铭禹">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qsctech-watercube.github.io/blog/null"><link rel="shortcut icon" href="/qsctech-watercube.github.io/img/favicon.png"><link rel="canonical" href="http://qsctech-watercube.github.io/blog/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/qsctech-watercube.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/qsctech-watercube.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2020-10-29 22:34:39'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/qsctech-watercube.github.io/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/qsctech-watercube.github.io/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/qsctech-watercube.github.io/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/"><i class="fa-fw fas fa-home"></i><span> Homes</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/qsctech-watercube.github.io/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/qsctech-watercube.github.io/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/qsctech-watercube.github.io/gallery/"><i class="fa-fw fas fa-images"></i><span> Gallery</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/qsctech-watercube.github.io/">水立方技术站</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/"><i class="fa-fw fas fa-home"></i><span> Homes</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/qsctech-watercube.github.io/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/qsctech-watercube.github.io/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/qsctech-watercube.github.io/gallery/"><i class="fa-fw fas fa-images"></i><span> Gallery</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/qsctech-watercube.github.io/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">水立方技术站</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/qsctech-watercube.github.io/%E8%B0%88InitPieVectTable%E5%87%BD%E6%95%B0.html" title="谈InitPieVectTable()函数">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="谈InitPieVectTable()函数"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/%E8%B0%88InitPieVectTable%E5%87%BD%E6%95%B0.html" title="谈InitPieVectTable()函数">谈InitPieVectTable()函数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-29T12:59:57.000Z" title="发表于 2020-10-29 20:59:57">2020-10-29</time></span></div><div class="content">题目中断向量初始化说明
+习题: InitPieVectTable( )函数涉及了哪些变量，它们是如何定义、如何定位的:该函数有什么作用?要求不少于3000字:
+1.DSP28_PieVect.h
+2.DSP281x_PieVect.c
+3.DSP281x_GlobalVariableDefs.c
+4.DSP281x_Headers_nonBIOS. cmd
+5.DSP28_DefaultIsr.h
+6.DSP281x_DefaultIsr.c
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/qsctech-watercube.github.io/%E6%AD%A3%E7%BB%8F%E8%AE%A1%E5%88%92.html" title="正经计划">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="正经计划"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/%E6%AD%A3%E7%BB%8F%E8%AE%A1%E5%88%92.html" title="正经计划">正经计划</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-29T07:33:22.000Z" title="发表于 2020-10-29 15:33:22">2020-10-29</time></span></div><div class="content">前言最近太颓废啦！于是决定从今天开始制定计划。
+计划组成：睡眠、当日学习任务、娱乐时间
+10.29
+ 18:00-20:00写电机学作业
+ 20:00-21:00看微机的论文怎么写
+ 21:00-21:30洗漱
+ 21:30-23:30看哈利波特与混血王子
+ 23:30-24:00背单词，了解怎样练习听力
+ 24:00睡眠！！
+
+10.30
+ 9:00起床
+ 9:50-12:15上发电厂的课
+ 14:30午睡结束
+ 14:30-17:00学习发电厂
+ 
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/qsctech-watercube.github.io/%E6%96%B0%E6%A6%82%E5%BF%B5%E6%A0%A1%E8%BD%A6.html" title="新概念校车">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="新概念校车"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/%E6%96%B0%E6%A6%82%E5%BF%B5%E6%A0%A1%E8%BD%A6.html" title="新概念校车">新概念校车</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-19T01:49:17.000Z" title="发表于 2020-10-19 09:49:17">2020-10-19</time></span></div><div class="content">前言前些天发现了ZJU School-Bus一个有趣的网站，激起了我的兴趣。我就在这边记录一下我的做题经历（不含解法）因为我没有给我的博客做谷歌收录/百度收录。所以我觉得没有违反这个规定🤔
+![ZJU school bus 1](https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/ZJU school bus 1.png)
+welcome这是第一部分，看起来整体难度简单
+CheckIn有手就行
+QR Code看了看二维码的原理，这题是缺了右下角，我手动画了（
+calculator本来以为很简单，不就10秒内完成这个算式么。
+![welcome calculator 1](https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/welcome calculator 1.jpeg)
+然后发现要做十次这样的运算，初步想法是写脚本。看了Hint说可以用pwntools，那就试试吧！pwntools是一个二进制利用框架。官方文档提供了详细的api规范。我没有耐下心去看，我觉得做这道题不需要那 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B7Openwrt%E4%BD%9C%E8%BD%AF%E8%B7%AF%E7%94%B1.html" title="树莓派3B+刷Openwrt作软路由">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/RaspberryPi.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="树莓派3B+刷Openwrt作软路由"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B7Openwrt%E4%BD%9C%E8%BD%AF%E8%B7%AF%E7%94%B1.html" title="树莓派3B+刷Openwrt作软路由">树莓派3B+刷Openwrt作软路由</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T02:50:22.000Z" title="发表于 2020-09-28 10:50:22">2020-09-28</time></span></div><div class="content">手头的路由器没有l2tp，不过有一台树莓派3B+，经过科学搜索后决定把树莓派配成软路由。本文仅作记录。初步的想法是将openwrt烧录到树莓派中，将树莓派连接到工作的路由器上，用树莓派的无线网课发射Wi-Fi，就可以实现功能。
+安装openwrt下载镜像我选择了最新的版本19.07.2,清华源下载地址是openwrt 19.07.2 树莓派3B+
+烧录系统由于我的树莓派之前烧了raspberryPi,所以第一步是格式化。格式化软件用的是SDFormatter。烧录软件用的是Etcher,推荐windows和Mac用户使用这款软件。
+![flash complete](https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/flash complete.png)
+启动树莓派将SD卡插入树莓派，用网线把树莓派和电脑连起来，再接通树莓派电源，等待系统开机完毕。打开电脑的网络设置，可以看到如下界面（我改用了Mac），进入192.168.1.1，初始密码是password。
+树莓派openwrt连接互联网树莓派暂时没有互联网连接，因为树莓派的网线 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/qsctech-watercube.github.io/%E5%88%86%E4%BA%ABMacBook%E7%9A%84%E7%BB%88%E7%AB%AF%EF%BC%88Terminal%EF%BC%89%E7%BE%8E%E5%8C%96.html" title="分享MacBook的终端（Terminal）美化">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/925-1.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="分享MacBook的终端（Terminal）美化"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/%E5%88%86%E4%BA%ABMacBook%E7%9A%84%E7%BB%88%E7%AB%AF%EF%BC%88Terminal%EF%BC%89%E7%BE%8E%E5%8C%96.html" title="分享MacBook的终端（Terminal）美化">分享MacBook的终端（Terminal）美化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-25T02:39:50.000Z" title="发表于 2020-09-25 10:39:50">2020-09-25</time></span></div><div class="content">分享MacBook的终端（Terminal）美化在98上好像没有看到Mac OS终端相关的帖子，那么我来分享一下吧。
+Mac自带的终端没有文件名高亮等功能，而且界面比较单调，故lz做了如下美化，可以让自己使用起来更加方便，看起来更加舒服。
+配置思路是iTerm2+Zsh+Oh-My-Zsh。关于这三个名词的介绍可以看文末。
+0.效果图
+1.安装iTerm2官网：https://www.iterm2.com/
+下载地址：https://www.iterm2.com/downloads.html
+在官网下载安装包，将安装包移到应用程序，然后打开就可以使用。
+也可以通过Homebrew安装
+brew cask install iTerm2
+
+
+
+安装完毕后，后面的操作都用这个终端来操作。这样可以看到直观效果。
+2.zshmacOS Mojave 之后已经自带了 Zsh
+切换shell为zsh
+chsh -s /bin/zsh
+
+重新打开iTerm2
+echo $SHELL/bin/zsh
+
+则表示成功
+3.oh-my-zshsh -c &quot;$(curl -fsSL https://r ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/qsctech-watercube.github.io/Mac%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E5%A4%96%E7%BD%91.html" title="Mac搭建本地服务器并映射到外网">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/ngrok-cover.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="Mac搭建本地服务器并映射到外网"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/Mac%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B9%B6%E6%98%A0%E5%B0%84%E5%88%B0%E5%A4%96%E7%BD%91.html" title="Mac搭建本地服务器并映射到外网">Mac搭建本地服务器并映射到外网</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-26T14:57:36.000Z" title="发表于 2020-05-26 22:57:36">2020-05-26</time></span></div><div class="content">引言最近在学前端，自己尝试着在局域网里搭建Web服务器测试环境.正好Mac自带Apache服务器，所以比较方便。
+搭建本地服务器第一步是打开Mac自带的服务器
+终端指令打开Mac自带的Terminal或者Iterm,输入以下指令。
+//开启apache：输入管理员密码sudo apachetl start//重启apachesudo apachetl restart//关闭apache,用完之后记得关掉，很费电。sudo apachetl stop 
+
+开启成功后可以访问http://127.0.0.1/或者http://localhost测试一下如果显示It works！，说明开启成功。
+
+网页编辑这个显示It works!的网页文件地址在/Library/WebServer/Documents/index.html.en如果想要放自己的网站,可以吧文件拖入Documents。
+再次提醒记得关闭Apachetl本地web服务器映射到外网我这里采用ngrok的方式
+ngrok使用本地服务映射到外网有很多,但这里说的是通过免费ngrok内网穿透映射到外网ngrok官网下载地址:https ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%9A%84%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97.html" title="树莓派的食用指北">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/RaspberryPi.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="树莓派的食用指北"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%9A%84%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97.html" title="树莓派的食用指北">树莓派的食用指北</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-22T15:12:23.000Z" title="发表于 2020-05-22 23:12:23">2020-05-22</time></span></div><div class="content">树莓派写入Raspbian及前期操作/避雷折腾了一台树莓派3B+,系统选择的是最普通也最大众的Raspbian。接下来可能会去折腾一些别的系统（咕咕咕
+系统镜像下载官方镜像下载地址：https://www.raspberrypi.org/downloads/我推荐的清华源：https://mirrors.tuna.tsinghua.edu.cn/raspbian-images/raspbian/images/
+SD卡准备
+树莓派的系统是烧在SD卡上的，这张SD卡至少得有8G的储存空间。拿到SD卡后第一步是格式化，这里我使用的是SD card formatter(mac用户)，win用户有很多选择，总之先把SD卡格式化。
+在Mac环境下可以使用balenaEtcher写入系统，
+在windows环境下使用Win32 Disk Imager软件写入，把下载的zip包解压，打开软件，选择img文件，点击“写”按钮，等待写入完成。
+写入完成后可以看到SD内有了boot分区，在boot内新建一个ssh文件（用于之后的ssh连接）。
+将SD卡插入树莓派，将网线连接上，如果有HDMI接口的显示器的话 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/qsctech-watercube.github.io/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84React-JS.html" title="从零开始的React.JS">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/react.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="从零开始的React.JS"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84React-JS.html" title="从零开始的React.JS">从零开始的React.JS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-12T12:15:10.000Z" title="发表于 2020-04-12 20:15:10">2020-04-12</time></span></div><div class="content">(不是俺写的，资源分享！U老板牛逼)
+从零开始的React.JSReact.js是如今最流行的前端框架之一，也是我们今天所要学习的内容。
+Getting started首先，我们需要创建一个React.js工程，为此我们使用官方的工具create-react-app来创建，而在此之前首先需要安装本工具。
+$ npm install -g create-react-app
+
+
+npm是Node Package Manager，负责管理Node.js下的各种包。
+install不解释，-g是global，即安装到全局。
+create-react-app是安装的包名，注意不要打错。
+有时命令的执行会很慢，这时可以执行npm config edit，用默认的编辑器打开npm的配置文件，在开头加上一行registry=https://registry.npm.taobao.org/，这样就可以使用淘宝的npm仓库镜像了，会快很多。
+
+接着，cd到一个方便写代码的地方，然后：
+$ create-react-app my-react-app
+
+
+create-react-app是一个可执行文件，在l ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/qsctech-watercube.github.io/Unity%E5%AE%9E%E7%8E%B0%E2%80%9C%E4%BB%A5%E5%88%80%E5%88%BB%E7%9F%B3%E2%80%9D.html" title="Unity实现“以刀刻石”">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/xcode.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="Unity实现“以刀刻石”"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/Unity%E5%AE%9E%E7%8E%B0%E2%80%9C%E4%BB%A5%E5%88%80%E5%88%BB%E7%9F%B3%E2%80%9D.html" title="Unity实现“以刀刻石”">Unity实现“以刀刻石”</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-12T12:08:23.000Z" title="发表于 2020-04-12 20:08:23">2020-04-12</time></span></div><div class="content">思路从Apple Pencil和ipad的交互获取数据，用Unity调用这个数据，进行处理；返回app接口，实现效果。
+unity实现“以刀刻石”概念
+**纹理（Texture)**：是Unity最基础的图片形式。Material（材质）包含Map（贴图），Map包含Texture（纹理）。
+**贴图（Map)**：一种就是就是把纹理通过坐标映射到3D物体的表面，另一种就是把纹理加入一些功能，这两种都是贴图。
+**材质（Material)**：将输入的贴图或者颜色，加上对应的Shader，以及对Shader的特定的参数设置，将这些打包在一起就是一个材质了。
+着色器（Shader):Shader负责将输入的Mesh（网格）以指定的方式和输入的贴图或者颜色等组合作用，然后输出。
+三向贴图：三向贴图是一种投射纹理功能，可缓解地形陡坡上的拉伸效应。 其基本原理是，该纹理投射自 3 个指向，然后选择其中最适合当前表面角度的那一个。 这与使用自顶向下投射技术的标准地形纹理方法不同。
+
+具体实现在一块三维的石头上实现刻痕以及体积的减少。在石块下方放置两个个正交相机，从下往上拍摄；根据上一步生成深度图 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/qsctech-watercube.github.io/Matlab%E5%AE%9E%E7%8E%B0%E5%88%97%E9%98%B5%E5%A4%A9%E7%BA%BF.html" title="Matlab实现列阵天线">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/Matlab.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="Matlab实现列阵天线"></a></div><div class="recent-post-info"><a class="article-title" href="/qsctech-watercube.github.io/Matlab%E5%AE%9E%E7%8E%B0%E5%88%97%E9%98%B5%E5%A4%A9%E7%BA%BF.html" title="Matlab实现列阵天线">Matlab实现列阵天线</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-11-26T08:31:30.000Z" title="发表于 2019-11-26 16:31:30">2019-11-26</time></span></div><div class="content">前言本文讲解如何利用Matlab程序利用 MATLAB 模拟列阵天线产生的信号图形。
+理论基础
+阵列天线将若干个輻射单元按一定方式排列所构成的系统叫做列阵天线，或天线阵。构成天线阵的輻射单元 叫天线元或阵元。如果天线元排列在一直线上称为线阵天线，如果排列在一平面上，就称为面阵天线。 只要媒质是线性的，根据线性系统的叠加原理，列阵天线的輻射场就是各天线元輻射场的矢量和。适当 控制各天线元激励电流的大小与相位，就可得到所需的輻射特性。本实验只讨论由相似天线元组成的 线阵天线的方向性。所谓相似天线元是指各天线元的形状与尺寸相同，且以相同姿态排列。
+单个天线元的分析构成天线的天线元是中心激励的对称振子天线，它们都按z方向指向且沿y轴均匀排列。分析时还进一步假定每一辐射单元激励电流的幅值相同，而激励电流的相位，对于相邻的两辐射单元相差psi。
+整个天线的计算应用叠加原理，总辐射场为每个辐射单元的辐射场的总和。再将研究地点置于与天线相差较远的区 场，并认为天线元到研究场地的射线平行，就会发现两者之间仅相差一个位移因子。最后将每个天线元 产生的电场进行相加。
+
+以下为Matlab代码
+clc;cle ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/qsctech-watercube.github.io/page/2/">2</a><a class="extend next" rel="next" href="/qsctech-watercube.github.io/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/qsctech-watercube.github.io/null" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">夏铭禹</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/qsctech-watercube.github.io/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div><div class="card-info-data-item is-center"><a href="/qsctech-watercube.github.io/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E8%B0%88InitPieVectTable%E5%87%BD%E6%95%B0.html" title="谈InitPieVectTable()函数"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="谈InitPieVectTable()函数"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E8%B0%88InitPieVectTable%E5%87%BD%E6%95%B0.html" title="谈InitPieVectTable()函数">谈InitPieVectTable()函数</a><time datetime="2020-10-29T12:59:57.000Z" title="发表于 2020-10-29 20:59:57">2020-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%AD%A3%E7%BB%8F%E8%AE%A1%E5%88%92.html" title="正经计划"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="正经计划"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%AD%A3%E7%BB%8F%E8%AE%A1%E5%88%92.html" title="正经计划">正经计划</a><time datetime="2020-10-29T07:33:22.000Z" title="发表于 2020-10-29 15:33:22">2020-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%96%B0%E6%A6%82%E5%BF%B5%E6%A0%A1%E8%BD%A6.html" title="新概念校车"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="新概念校车"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%96%B0%E6%A6%82%E5%BF%B5%E6%A0%A1%E8%BD%A6.html" title="新概念校车">新概念校车</a><time datetime="2020-10-19T01:49:17.000Z" title="发表于 2020-10-19 09:49:17">2020-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B7Openwrt%E4%BD%9C%E8%BD%AF%E8%B7%AF%E7%94%B1.html" title="树莓派3B+刷Openwrt作软路由"><img src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/RaspberryPi.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="树莓派3B+刷Openwrt作软路由"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B7Openwrt%E4%BD%9C%E8%BD%AF%E8%B7%AF%E7%94%B1.html" title="树莓派3B+刷Openwrt作软路由">树莓派3B+刷Openwrt作软路由</a><time datetime="2020-09-28T02:50:22.000Z" title="发表于 2020-09-28 10:50:22">2020-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E5%88%86%E4%BA%ABMacBook%E7%9A%84%E7%BB%88%E7%AB%AF%EF%BC%88Terminal%EF%BC%89%E7%BE%8E%E5%8C%96.html" title="分享MacBook的终端（Terminal）美化"><img src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/925-1.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="分享MacBook的终端（Terminal）美化"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E5%88%86%E4%BA%ABMacBook%E7%9A%84%E7%BB%88%E7%AB%AF%EF%BC%88Terminal%EF%BC%89%E7%BE%8E%E5%8C%96.html" title="分享MacBook的终端（Terminal）美化">分享MacBook的终端（Terminal）美化</a><time datetime="2020-09-25T02:39:50.000Z" title="发表于 2020-09-25 10:39:50">2020-09-25</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/qsctech-watercube.github.io/tags/MacBook/" style="font-size: 1.3em; color: #99a1ac">MacBook</a> <a href="/qsctech-watercube.github.io/tags/Matlab/" style="font-size: 1.5em; color: #99a9bf">Matlab</a> <a href="/qsctech-watercube.github.io/tags/Unity/" style="font-size: 1.1em; color: #999">Unity</a> <a href="/qsctech-watercube.github.io/tags/daily-plans/" style="font-size: 1.1em; color: #999">daily plans</a> <a href="/qsctech-watercube.github.io/tags/iOS/" style="font-size: 1.3em; color: #99a1ac">iOS</a> <a href="/qsctech-watercube.github.io/tags/javascript/" style="font-size: 1.1em; color: #999">javascript</a> <a href="/qsctech-watercube.github.io/tags/l2tp/" style="font-size: 1.1em; color: #999">l2tp</a> <a href="/qsctech-watercube.github.io/tags/openwrt/" style="font-size: 1.1em; color: #999">openwrt</a> <a href="/qsctech-watercube.github.io/tags/python/" style="font-size: 1.3em; color: #99a1ac">python</a> <a href="/qsctech-watercube.github.io/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 1.1em; color: #999">图床</a> <a href="/qsctech-watercube.github.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 1.3em; color: #99a1ac">树莓派</a> <a href="/qsctech-watercube.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 1.1em; color: #999">科学上网</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/qsctech-watercube.github.io/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">4</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">19</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-10-29T14:34:39.081Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By 夏铭禹</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/qsctech-watercube.github.io/js/utils.js"></script><script src="/qsctech-watercube.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
