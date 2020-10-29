@@ -1,0 +1,285 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>从零开始的React.JS | 水立方技术站</title><meta name="keywords" content="javascript"><meta name="author" content="夏铭禹"><meta name="copyright" content="夏铭禹"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="(不是俺写的，资源分享！U老板牛逼) 从零开始的React.JSReact.js是如今最流行的前端框架之一，也是我们今天所要学习的内容。 Getting started首先，我们需要创建一个React.js工程，为此我们使用官方的工具create-react-app来创建，而在此之前首先需要安装本工具。 $ npm install -g create-react-app   npm是Node Pa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始的React.JS">
+<meta property="og:url" content="http://qsctech-watercube.github.io/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84React-JS.html">
+<meta property="og:site_name" content="水立方技术站">
+<meta property="og:description" content="(不是俺写的，资源分享！U老板牛逼) 从零开始的React.JSReact.js是如今最流行的前端框架之一，也是我们今天所要学习的内容。 Getting started首先，我们需要创建一个React.js工程，为此我们使用官方的工具create-react-app来创建，而在此之前首先需要安装本工具。 $ npm install -g create-react-app   npm是Node Pa">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/react.png">
+<meta property="article:published_time" content="2020-04-12T12:15:10.000Z">
+<meta property="article:modified_time" content="2020-09-25T02:56:44.740Z">
+<meta property="article:author" content="夏铭禹">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/react.png"><link rel="shortcut icon" href="/qsctech-watercube.github.io/img/favicon.png"><link rel="canonical" href="http://qsctech-watercube.github.io/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84React-JS"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/qsctech-watercube.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/qsctech-watercube.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-09-25 10:56:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/qsctech-watercube.github.io/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/qsctech-watercube.github.io/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/qsctech-watercube.github.io/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/react.png)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/qsctech-watercube.github.io/">水立方技术站</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">从零开始的React.JS</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-04-12T12:15:10.000Z" title="发表于 2020-04-12 20:15:10">2020-04-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-25T02:56:44.740Z" title="更新于 2020-09-25 10:56:44">2020-09-25</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>(不是俺写的，资源分享！U老板牛逼)</p>
+<h1 id="从零开始的React-JS"><a href="#从零开始的React-JS" class="headerlink" title="从零开始的React.JS"></a>从零开始的React.JS</h1><p><strong>React.js</strong>是如今最流行的前端框架之一，也是我们今天所要学习的内容。</p>
+<h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><p>首先，我们需要创建一个React.js工程，为此我们使用官方的工具<code>create-react-app</code>来创建，而在此之前首先需要安装本工具。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g create-react-app</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>npm</code>是<em>Node Package Manager</em>，负责管理Node.js下的各种包。</li>
+<li><code>install</code>不解释，<code>-g</code>是global，即安装到全局。</li>
+<li><code>create-react-app</code>是安装的包名，注意不要打错。</li>
+<li>有时命令的执行会很慢，这时可以执行<code>npm config edit</code>，用默认的编辑器打开<code>npm</code>的配置文件，在开头加上一行<code>registry=https://registry.npm.taobao.org/</code>，这样就可以使用淘宝的<code>npm</code>仓库镜像了，会快很多。</li>
+</ul>
+<p>接着，<code>cd</code>到一个方便写代码的地方，然后：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ create-react-app my-react-app</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>create-react-app</code>是一个可执行文件，在<code>linux</code>环境下可以用<code>which create-react-app</code>查看其所在的位置。</li>
+<li>这个文件是我们刚刚的命令所安装的，这也是<code>npm install -g</code>的主要目的，即安装某个工具。</li>
+<li>这个文件实际上是一个Node.js脚本，这意味着它需要Node.js的存在来运行。另外，如果你使用某种Node.js版本管理工具（比如<code>nvm</code>）的话，那你很可能需要在更新Node.js版本之后重新安装之前装过的包。</li>
+<li><code>create-react-app</code>的名字和之前安装的包名一模一样，这并不是巧合，一般而言所安装的命令名称都和包名相同。</li>
+<li>这条命令会在当前目录下创建一个叫做<code>my-react-app</code>的文件夹，里面有一个完整的工程，以及Node.js的包描述文件<code>package.json</code>和一个空的<code>git</code>仓库。</li>
+</ul>
+<p>最后，我们再<code>cd</code>进入新的工程，运行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这个命令用<code>npm</code>运行了<code>start</code>脚本，也就是<code>package.json</code>里面的<code>start</code>，一般它的内容是<code>react-scripts start</code>。</li>
+<li>稍等一段时间，你就会看到默认浏览器中打开了一个页面，地址应该是<code>http://localhost:3000/</code>，里面是一个正在运行的React.js应用。</li>
+<li>你可以修改<code>src/App.js</code>（以<code>my-react-app</code>目录为基础），在保存之后，不需要做任何多余的工作，之前的网页就会自动更新内容。如果代码有错误的话，页面上也会提示。</li>
+<li>这是因为<code>npm start</code>实际上启动了一个<code>dev server</code>，它会自动侦听<code>src</code>文件夹中的更改，并且自动构建并刷新页面。不过，如果你修改了<code>src</code>文件夹以外的内容，那你有可能需要重启一下<code>npm start</code>。</li>
+</ul>
+<p>恭喜你，你迈出了通向React的第一步！</p>
+<h2 id="JSX和JS"><a href="#JSX和JS" class="headerlink" title="JSX和JS"></a>JSX和JS</h2><p>观察<code>src/App.js</code>：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;div className=<span class="string">&quot;App&quot;</span>&gt;</span><br><span class="line">  &lt;header className=<span class="string">&quot;App-header&quot;</span>&gt;</span><br><span class="line">    &lt;img src=&#123;logo&#125; className=<span class="string">&quot;App-logo&quot;</span> alt=<span class="string">&quot;logo&quot;</span> /&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">      Edit &lt;code&gt;src/App.js&lt;/code&gt; and save to reload.</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">    &lt;a</span><br><span class="line">      className=<span class="string">&quot;App-link&quot;</span></span><br><span class="line">      href=<span class="string">&quot;https://reactjs.org&quot;</span></span><br><span class="line">      target=<span class="string">&quot;_blank&quot;</span></span><br><span class="line">      rel=<span class="string">&quot;noopener noreferrer&quot;</span></span><br><span class="line">    &gt;</span><br><span class="line">      Learn React</span><br><span class="line">    &lt;/a&gt;</span><br><span class="line">  &lt;/header&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码是不是很像<code>HTML</code>代码？</p>
+<ul>
+<li>这种语法叫做<code>JSX</code>，它内嵌于<code>javascript</code>代码中，作为一种特殊的表达式存在。当然，他不是<code>javascript</code>本身的语法，如果不使用构建工具（之后再解释）的话就会出错。</li>
+<li>这种语法的目的就是为了模拟<code>HTML</code>，以一种“所见即所得”的形式构建GUI，大大提高开发效率。这就叫<strong>声明式编程</strong>，<em>declarative programming</em>。</li>
+<li><code>JSX</code>中可以内嵌<code>javascript</code>代码，很容易实现两者之间的相互操作，执行表达式，将结果作为所显示的内容，比如<code>&lt;div&gt;&#123;n&#125;&lt;/div&gt;</code>。这一点符合数据驱动的特征。</li>
+<li><code>JSX</code>本质上是一种语法糖，最终是调用了React.js的API，因此使用<code>JSX</code>的时候需要导入<code>React</code>，也就是<code>App.js</code>中第一行的<code>import React from &#39;react&#39;;</code>。</li>
+</ul>
+<p>现在，你可以随意修改<code>App.js</code>中的代码，改改文字，执行一些计算等等，然后看看会发生什么。</p>
+<hr>
+<p>上面的<code>JSX</code>代码中，我们所使用到的元素都是<code>HTML</code>原生元素，比如<code>div</code>、<code>p</code>之类的。接下来我们会看到，<code>JSX</code>最强大的地方之一在于，你可以定义自己的元素，来提高模块化程度、减少代码重复、提高开发效率。</p>
+<p>请用下面的代码替换<code>App.js</code>的内容：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./App.css&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyElement</span>(<span class="params">&#123; n &#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;n + 1&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">&quot;App&quot;</span>&gt;</span><br><span class="line">      &lt;MyElement n=&#123;<span class="number">0</span>&#125;/&gt;</span><br><span class="line">      &lt;MyElement n=&#123;<span class="number">1</span>&#125;/&gt;</span><br><span class="line">      &lt;MyElement n=&#123;<span class="number">2</span>&#125;/&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+
+<p>保存，等待页面刷新，你应该会看到页面上显示了<code>1</code>、<code>2</code>和<code>3</code>。</p>
+<ul>
+<li>在<code>App</code>里的<code>JSX</code>中，我们的元素变成了<code>MyElement</code>，这是我们自己定义的新元素。</li>
+<li>语法上，<code>MyElement</code>只是一个<code>javascript</code>函数，和其他任何函数没有区别。不过，当我们将他用于<code>JSX</code>的元素名时，React.js就会把他当作一个元素来使用。</li>
+<li>注意<code>MyElement</code>的参数，它接受一个对象，对象中的属性<code>n</code>正是在后面的<code>JSX</code>代码中作为参数传入的<code>n</code>。注意传给<code>JSX</code>元素的参数可以是任何类型，不一定得是<code>HTML</code>中那样的字符串。</li>
+<li>通常而言，自定义元素都应当以驼峰命名法命名，首字母大写。</li>
+</ul>
+<hr>
+<p>如果我们需要一百个<code>MyElement</code>元素，那手写起来可能就比较累了，也许你会希望用代码来生成，那么请看下面的代码：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">&quot;App&quot;</span>&gt;</span><br><span class="line">      &#123;[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].map(<span class="function"><span class="params">n</span> =&gt;</span> (</span><br><span class="line">        &lt;MyElement n=&#123;n&#125;/&gt;</span><br><span class="line">      ))&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>保存运行，你应该会看到多出来了一个<code>4</code>。</p>
+<ul>
+<li>大括号<code>&#123;&#125;</code>中包含的代码会被执行，达到一个React元素的数组，用作<code>div</code>元素的孩子，作为其<code>children</code>属性。</li>
+<li>大括号中的代码可以是任何<code>javascript</code>代码，不过一般不太使用控制流，另一个常见的用法是使用<code>&amp;&amp;</code>和<code>||</code>运算符，来进行条件渲染。</li>
+</ul>
+<p>最后，我们介绍<code>JSX</code>一些重要的细节。</p>
+<ul>
+<li>在<code>JSX</code>中，我们使用的是<code>className</code>来定义类名，而不是<code>HTML</code>中的<code>class</code>，这是因为<code>JSX</code>只是<code>js</code>的语法糖，而<code>js</code>不允许将<code>class</code>用作标识符。</li>
+<li>你可能会受到警告，说<code>map</code>中的对象没有<code>key</code>属性，这个我们以后有空再讲。</li>
+</ul>
+<h2 id="数据驱动、React-Hooks和渲染流程"><a href="#数据驱动、React-Hooks和渲染流程" class="headerlink" title="数据驱动、React Hooks和渲染流程"></a>数据驱动、React Hooks和渲染流程</h2><p>之前，我们提到了数据驱动。什么是数据驱动？打开b站，映入眼帘的是各种视频，显然这个网页不是手写的，它的内容也就是所谓的数据——是数据让页面拥有了血肉。</p>
+<p>另外，前端中拥有各种各样的状态，比如“一个对话框的打开状态”、“动画播放当前的帧数”等等，这些数据显然不适合保存在服务器，我们需要一种方法在客户端保存、处理、更新他们，并且在这些状态改变时改变页面内容。</p>
+<p>我们来看一个例子（替换<code>App.js</code>）：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./App.css&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [n, setN] = useState(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> plusOne = <span class="function">() =&gt;</span> setN(n + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">&quot;App&quot;</span>&gt;</span><br><span class="line">      &lt;div&gt;&#123;n&#125;&lt;/div&gt;</span><br><span class="line">      &lt;button onClick=&#123;plusOne&#125;&gt;CLICK ME&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+
+<p>保存刷新，点击页面上的按钮，上面显示的数字不断增加。</p>
+<ul>
+<li><code>useState()</code>是一个<em>React Hook</em>，用于声明一个状态，括号中的参数是状态的初始值。</li>
+<li><code>useState()</code>的返回值是一个二元数组，第一个值是状态本身，第二个是一个用于改变状态的函数。</li>
+<li><code>useState()</code>是怎么工作的？说来话长。首先，React.js使用声明式编程，这将整个应用分为三部分，一部分是一组状态，或者说数据，另一部分是通过状态生成界面，最后一部分是用来更新状态的行为。作为声明式渲染的特征，状态本身是纯粹的数据，生成界面用的函数是引用透明的，而更新状态的行为只更新状态，别的什么都不做。这样就做到了很好的分划。</li>
+<li><code>useState()</code>的工作原理是，每次需要生成界面时，React.js调用<code>App</code>函数，并且保存一个上下文，而<code>App</code>函数调用<code>useState()</code>时，<code>useState()</code>会在上下文中寻找上一次调用时的状态，作为这次的返回值——除非你用<code>setN</code>在之前主动改变了状态。</li>
+<li>本质上来说，<code>useState()</code>是一个补丁，让你忽略这个状态实际存在于<code>App</code>函数之内，从而你可以把<code>App</code>中的<code>JSX</code>部分写成一个引用透明的东西，虽然严格意义上整个函数其实并不是引用透明的。这里有历史的原因，也有<code>js</code>语法的局限。</li>
+<li>从较高的视角上，状态与渲染过程独立，不过实际上整个应用经常会被切成多个元素，每个元素内是一个“状态-渲染-更新”的三元对。</li>
+</ul>
+<hr>
+<p><code>js</code>有个毛病，就是——<code>const</code>只表示引用不变，不保证内容不改变。比如下面这段：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = &#123; <span class="attr">foo</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> a1 = a;</span><br><span class="line">a.foo = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">const</span> a2 = a;</span><br><span class="line"><span class="built_in">console</span>.log(a1 === a2); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p><code>a</code>的内容改变了，然而其引用本身没有改变，在React.js中这就会导致一个问题：我们很难知道应用的状态是否发生了改变，从而应当重新渲染生成界面，因为做深比较是一件很耗时的事情。</p>
+<p>因此，我们希望——任何内容的变化都应当导致引用的变化，这样只要对比引用即可，比如：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyElement</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [a, setA] = useState(&#123; <span class="attr">foo</span>: <span class="number">1</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> &#123; foo &#125; = a;</span><br><span class="line">  <span class="keyword">const</span> update = <span class="function">() =&gt;</span> setA(&#123; <span class="attr">foo</span>: foo + <span class="number">1</span> &#125;);</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;update&#125;</span>&gt;</span>&#123;foo&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里，每次<code>setA()</code>的参数都是一个全新创建的对象，这很好地满足了我们的目的。然而，还有另一个问题，就是我们不希望在内容未改变时就改变引用，比如：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyElement</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [a, setA] = useState(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> updateA = <span class="function">() =&gt;</span> setA(a + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">const</span> [b, setB] = useState(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> updateB = <span class="function">() =&gt;</span> setB(b + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> &lt;div&gt;</span><br><span class="line">    &lt;button onClick=&#123;updateA&#125;&gt;&#123;a&#125;&lt;/button&gt;</span><br><span class="line">    &lt;button onClick=&#123;updateB&#125;&gt;&#123;b&#125;&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们这里创建了两个状态，对应两个按钮，然而如果你点击第一个按钮，导致<code>a</code>加一，<code>setA()</code>的调用会导致React重新渲染改元素，即重新执行<code>MyElement</code>函数，而由于<code>js</code>本身的语法，<code>updateB</code>也会是一个全新的<code>lambda</code>函数。然而，无论是<code>b</code>的值还是<code>setB</code>的功能（实际上<code>setB</code>的引用也）都没有改变，明明没有必要重新创建<code>updateB</code>函数。</p>
+<p>新的函数导致了新的引用，导致第二个按钮的<code>onClick</code>参数发生改变，需要被重新渲染，导致了性能的浪费。这不是我们想要的，因此我们应该使用<code>useCallback</code>：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState, useCallback &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyElement</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [a, setA] = useState(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> updateA = useCallback(<span class="function">() =&gt;</span> setA(a + <span class="number">1</span>), [a]);</span><br><span class="line">  <span class="keyword">const</span> [b, setB] = useState(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> updateB = useCallback(<span class="function">() =&gt;</span> setB(b + <span class="number">1</span>), [b]);</span><br><span class="line">  <span class="keyword">return</span> &lt;div&gt;</span><br><span class="line">    &lt;button onClick=&#123;updateA&#125;&gt;&#123;a&#125;&lt;/button&gt;</span><br><span class="line">    &lt;button onClick=&#123;updateB&#125;&gt;&#123;b&#125;&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>现在，<code>a</code>的值变化只会导致<code>updateA</code>的引用变化，不会导致<code>updateB</code>的引用变化，这样第二个按钮就不需要重新渲染了。</li>
+<li><code>useCallback</code>的第一个参数就是之前的<code>lambda</code>函数，而后面数组里的<code>a</code>是这个函数所依赖的变量，如果这里面有值（的引用）发生变化，就会导致返回值的变化，反之如果这里面的值不变，React也会保证返回值引用不变。</li>
+<li>这里要注意的是，由于<code>js</code>的语法，每次运行<code>MyElement</code>函数时，无论变化的是<code>a</code>还是<code>b</code>，<code>() =&gt; setA(a + 1)</code>这个表达式都会被执行，生成一个<code>lambda</code>函数，<code>useCallback</code>并不能防止这件事的发生。</li>
+<li><code>useCallback</code>的意义在于，它将引用变化和内容变化同步，减少了重新渲染的次数，因为React如果发现某个元素的所有参数引用都没有变化，就会复用之前渲染的结果，从而优化性能。</li>
+<li>由于<code>js</code>的闭包性质，<code>useCallback</code>的依赖项数组中应当包括<strong>所有</strong>函数所依赖的变量，无论你是否觉得它永远不会改变，具体的原因我们这里不多解释，读者可以自行学习。事实上，如今的<code>eslint</code>已经能够提示你是否依赖了过少或者过多的项。</li>
+</ul>
+<p>还有一些其他的Hook，不过总的思路和原理都类似，这里就先不展开了。</p>
+<hr>
+<p>最后，让我们理解一下React这类前端框架工作的一个重要原理。</p>
+<p>当你喂给浏览器一段<code>HTML</code>代码时，它会将其解析为一颗<code>HTML</code>元素树，这被称作<code>DOM</code>，<em>Document Object Model</em>。在古代，我们从一颗初始的树出发，然后用<code>js</code>动态更新元素的内容和属性，或者创建和删除元素。</p>
+<p>然而，这些操作（称作<code>DOM</code>操作）的性能消耗很大，我们需要尽可能少地执行执行<code>DOM</code>操作，尤其在一个非常复杂的前端应用中的时候。理想的情况是，我们可以得知每个变化前后的<code>DOM</code>树状态，然后使用某种<code>diff</code>算法找出最少的变化。</p>
+<p>这，正是React的主要功能之一。</p>
+<p>实际上，在我们写的<code>JSX</code>经过构建时，它会被展开成许多<code>React.createElement</code>调用，而这一调用并非直接创建<code>DOM</code>元素，而是创造某种纯<code>js</code>的数据结构，一般称作<em>Virtual DOM</em>，或<code>VDOM</code>。</p>
+<p>由于<code>VDOM</code>是纯<code>js</code>的，它的创建、更改等操作成本都很低，因此React可以对比状态改变前后的两颗<code>VDOM</code>树，找出其中的变化，将变化翻译为<code>DOM</code>操作，应用到实际的<code>DOM</code>树上。</p>
+<p>不过，完美的<code>diff</code>算法时间复杂度太高，对此React用了一系列假设来加速对比，比如在一个元素的所有参数引用都没有改变时就默认渲染结果不会改变，无需进行对比。这正是为什么我们要求元素的渲染过程引用透明，并且要求内容改变和引用改变的同步。</p>
+<hr>
+<p>现在，让我们拼上最后一块缺失的拼图。</p>
+<p>查看<code>index.js</code>，你会看到：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span>, <span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>显然，这是在告诉React，根元素是<code>App</code>，应当渲染到<code>#root</code>的<code>DOM</code>元素处。因此，React调用<code>App</code>函数，<code>App</code>函数调用<code>useState</code>创建一个状态，并赋予它一个初始值，然后根据这个状态用<code>JSX</code>生成一颗<code>VDOM</code>树。</p>
+<p>React检查<code>VDOM</code>树，找到其中所有非原生的元素，然后对他们再一一展开，重复这一过程，直到得到一颗仅包括原生元素的<code>VDOM</code>树，这样React就可以将他转换成<code>DOM</code>树（或者说用于生成<code>DOM</code>树的操作），应用到实际的页面上，成为了我们看到的内容。</p>
+<p>当用户点击第一个按钮时，浏览器调用对应<code>DOM</code>元素的<code>onclick</code>属性，在React的包装下，它会调用了<code>App</code>元素中的<code>updateA</code>函数，而<code>updateA</code>又会调用<code>setA</code>。<code>setA</code>告诉React有一个状态需要更新，并且这个更新发生于<code>App</code>元素（也就是最初创建这个状态的元素），然后React就会更新状态，然后用新的状态重新运行<code>App</code>函数，得到新的<code>VDOM</code>树，对比得到一组<code>DOM</code>操作用于更新界面。</p>
+<p>这就是React.js中的渲染流程。</p>
+<h2 id="Demystifying-Frontend-Build-Process"><a href="#Demystifying-Frontend-Build-Process" class="headerlink" title="Demystifying Frontend Build Process"></a>Demystifying Frontend Build Process</h2><p>在运行<code>npm start</code>之后，你会看到这样的内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Compiled successfully!</span><br><span class="line"></span><br><span class="line">You can now view my-react-app <span class="keyword">in</span> the browser.</span><br><span class="line"></span><br><span class="line">  Local:            http://localhost:3000/</span><br><span class="line"></span><br><span class="line">Note that the development build is not optimized.</span><br><span class="line">To create a production build, use npm run build.</span><br></pre></td></tr></table></figure>
+
+<p>你也许认识Compile这个词，是“编译”的意思，但是这不是<code>js</code>么，为什么需要编译呢？</p>
+<p>事实上，比“编译”更好的说法是“构建”，即从项目源代码构建出用于部署的目标文件。在现代前端中，我们往往使用静态的前端代码，一切数据都在页面以及前端代码加载之后，通过调用<code>API</code>从后端获得，而非在访问时就嵌入到网页中，因此我们的“目标文件”实际上就是<code>HTML</code>、<code>JS</code>和<code>CSS</code>文件。</p>
+<p>你可能会说，但是我一开始写的不就是这些文件吗？事实上，构建系统有几个核心功能：</p>
+<ul>
+<li>以<code>js</code>文件中的<code>import</code>代码为引导，找出全部被依赖的模块，并将它们打包成一个<code>bundle</code>文件，作为目标文件。</li>
+<li><code>bundle</code>文件本质上是个<code>js</code>文件，<code>CSS</code>代码往往会内嵌在里面，同时还会生成一个简单的<code>HTML</code>文件，负责导入该<code>js</code>文件。</li>
+<li>其次，构建系统可以被配置来对各种文件类型做处理，比如将<code>md</code>文件预先渲染成<code>HTML</code>，将图片转换成各种格式之类的。</li>
+<li>另外，构建系统需要复制所依赖的各种媒体文件，保证便于在代码中使用的是同时也能在生成的目标文件中访问。有时，也可以将<code>CSS</code>代码整合成一个独立的文件，放在和其他媒体文件的同一个位置。</li>
+<li>构建系统是通过<code>webpack</code>实现的，配置脚本由<code>react-scripts</code>包提供，你可以用<code>npm run eject</code>导出配置脚本，可以自己编辑。</li>
+<li>用<code>npm start</code>所启动的开发服务器中运行的代码是未优化的版本，你也可以运行<code>npm run build</code>来生成一个优化过的、用于部署的版本。具体的部署相关知识，我们会在之后的内训中涉及到。</li>
+</ul>
+<p>那么，我们本次的React.js入门介绍就到这里了。</p>
+<p>以上。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">夏铭禹</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://qsctech-watercube.github.io/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84React-JS.html">http://qsctech-watercube.github.io/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84React-JS.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://qsctech-watercube.github.io/blog" target="_blank">水立方技术站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/qsctech-watercube.github.io/tags/javascript/">javascript</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/react.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%9A%84%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97.html"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/RaspberryPi.png" onerror="onerror=null;src='/qsctech-watercube.github.io/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">树莓派的食用指北</div></div></a></div><div class="next-post pull-right"><a href="/qsctech-watercube.github.io/Unity%E5%AE%9E%E7%8E%B0%E2%80%9C%E4%BB%A5%E5%88%80%E5%88%BB%E7%9F%B3%E2%80%9D.html"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/xcode.png" onerror="onerror=null;src='/qsctech-watercube.github.io/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Unity实现“以刀刻石”</div></div></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/qsctech-watercube.github.io/null" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">夏铭禹</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/qsctech-watercube.github.io/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div><div class="card-info-data-item is-center"><a href="/qsctech-watercube.github.io/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84React-JS"><span class="toc-number">1.</span> <span class="toc-text">从零开始的React.JS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-started"><span class="toc-number">1.1.</span> <span class="toc-text">Getting started</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSX%E5%92%8CJS"><span class="toc-number">1.2.</span> <span class="toc-text">JSX和JS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E3%80%81React-Hooks%E5%92%8C%E6%B8%B2%E6%9F%93%E6%B5%81%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">数据驱动、React Hooks和渲染流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demystifying-Frontend-Build-Process"><span class="toc-number">1.4.</span> <span class="toc-text">Demystifying Frontend Build Process</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E8%B0%88InitPieVectTable%E5%87%BD%E6%95%B0.html" title="谈InitPieVectTable()函数"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="谈InitPieVectTable()函数"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E8%B0%88InitPieVectTable%E5%87%BD%E6%95%B0.html" title="谈InitPieVectTable()函数">谈InitPieVectTable()函数</a><time datetime="2020-10-29T12:59:57.000Z" title="发表于 2020-10-29 20:59:57">2020-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%AD%A3%E7%BB%8F%E8%AE%A1%E5%88%92.html" title="正经计划"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="正经计划"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%AD%A3%E7%BB%8F%E8%AE%A1%E5%88%92.html" title="正经计划">正经计划</a><time datetime="2020-10-29T07:33:22.000Z" title="发表于 2020-10-29 15:33:22">2020-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%96%B0%E6%A6%82%E5%BF%B5%E6%A0%A1%E8%BD%A6.html" title="新概念校车"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="新概念校车"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%96%B0%E6%A6%82%E5%BF%B5%E6%A0%A1%E8%BD%A6.html" title="新概念校车">新概念校车</a><time datetime="2020-10-19T01:49:17.000Z" title="发表于 2020-10-19 09:49:17">2020-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B7Openwrt%E4%BD%9C%E8%BD%AF%E8%B7%AF%E7%94%B1.html" title="树莓派3B+刷Openwrt作软路由"><img src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/RaspberryPi.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="树莓派3B+刷Openwrt作软路由"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B7Openwrt%E4%BD%9C%E8%BD%AF%E8%B7%AF%E7%94%B1.html" title="树莓派3B+刷Openwrt作软路由">树莓派3B+刷Openwrt作软路由</a><time datetime="2020-09-28T02:50:22.000Z" title="发表于 2020-09-28 10:50:22">2020-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E5%88%86%E4%BA%ABMacBook%E7%9A%84%E7%BB%88%E7%AB%AF%EF%BC%88Terminal%EF%BC%89%E7%BE%8E%E5%8C%96.html" title="分享MacBook的终端（Terminal）美化"><img src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/925-1.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="分享MacBook的终端（Terminal）美化"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E5%88%86%E4%BA%ABMacBook%E7%9A%84%E7%BB%88%E7%AB%AF%EF%BC%88Terminal%EF%BC%89%E7%BE%8E%E5%8C%96.html" title="分享MacBook的终端（Terminal）美化">分享MacBook的终端（Terminal）美化</a><time datetime="2020-09-25T02:39:50.000Z" title="发表于 2020-09-25 10:39:50">2020-09-25</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By 夏铭禹</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/qsctech-watercube.github.io/js/utils.js"></script><script src="/qsctech-watercube.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>

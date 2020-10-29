@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>python简介 | 水立方技术站</title><meta name="keywords" content="python"><meta name="author" content="夏铭禹"><meta name="copyright" content="夏铭禹"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="前言思来想去，我好像还没有什么能教给大家的，毕竟我本人很菜（雾那就写一点面向0基础的code learner的python学习指南，学完大概能达到–看得懂别人代码的水平？（雾毕竟编程&#x2F;代码是拿来用的，不是用来学的（？表意不清，先在这挖个坑，以后再来填。 从计算机开始我不知道要不要讲二进制、八进制、十进制和十六进制，自行搜索叭。（雾ASCⅡ码、Unicode码、UTF-8码同理。   计算机分为软件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python简介">
+<meta property="og:url" content="http://qsctech-watercube.github.io/blog/python%E7%AE%80%E4%BB%8B.html">
+<meta property="og:site_name" content="水立方技术站">
+<meta property="og:description" content="前言思来想去，我好像还没有什么能教给大家的，毕竟我本人很菜（雾那就写一点面向0基础的code learner的python学习指南，学完大概能达到–看得懂别人代码的水平？（雾毕竟编程&#x2F;代码是拿来用的，不是用来学的（？表意不清，先在这挖个坑，以后再来填。 从计算机开始我不知道要不要讲二进制、八进制、十进制和十六进制，自行搜索叭。（雾ASCⅡ码、Unicode码、UTF-8码同理。   计算机分为软件">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/7974234FBBEF1AE0149868371CF77551.jpg">
+<meta property="article:published_time" content="2019-10-21T08:46:57.000Z">
+<meta property="article:modified_time" content="2019-11-21T04:24:13.599Z">
+<meta property="article:author" content="夏铭禹">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/7974234FBBEF1AE0149868371CF77551.jpg"><link rel="shortcut icon" href="/qsctech-watercube.github.io/img/favicon.png"><link rel="canonical" href="http://qsctech-watercube.github.io/blog/python%E7%AE%80%E4%BB%8B"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/qsctech-watercube.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/qsctech-watercube.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2019-11-21 12:24:13'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/qsctech-watercube.github.io/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/qsctech-watercube.github.io/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/qsctech-watercube.github.io/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/7974234FBBEF1AE0149868371CF77551.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/qsctech-watercube.github.io/">水立方技术站</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">python简介</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-10-21T08:46:57.000Z" title="发表于 2019-10-21 16:46:57">2019-10-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2019-11-21T04:24:13.599Z" title="更新于 2019-11-21 12:24:13">2019-11-21</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>思来想去，我好像还没有什么能教给大家的，毕竟我本人很菜（雾<br>那就写一点面向0基础的code learner的python学习指南，学完大概能达到–看得懂别人代码的水平？（雾<br>毕竟编程/代码是拿来用的，不是用来学的（？<br>表意不清，先在这挖个坑，以后再来填。</p>
+<h1 id="从计算机开始"><a href="#从计算机开始" class="headerlink" title="从计算机开始"></a>从计算机开始</h1><p>我不知道要不要讲二进制、八进制、十进制和十六进制，自行搜索叭。（雾<br>ASCⅡ码、Unicode码、UTF-8码同理。  </p>
+<h2 id="计算机"><a href="#计算机" class="headerlink" title="计算机"></a>计算机</h2><p>分为软件和硬件（挖个坑 待会用图解释<br><img src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/iMac%20p.png" alt="iMac"></p>
+<h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><p>硬件又分为主机和外部设备<br>比如上图中就是显示屏和主机一体机，屏幕和鼠标都是外部设备。</p>
+<h2 id="存储单位"><a href="#存储单位" class="headerlink" title="存储单位"></a>存储单位</h2><p>！！需要图</p>
+<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><p>操作系统（Operating System，简称OS）是管理和控制计算机软件与硬件资源的计算机程序，是直接运行在“裸机”上的最基本的系统软件<br>常见的操作系统：Unix/Linux、Windows、Mac OS</p>
+<h2 id="程序设计语言"><a href="#程序设计语言" class="headerlink" title="程序设计语言"></a>程序设计语言</h2><p>机器语言、汇编语言、高级语言、C/C++、Java、Python</p>
+<h1 id="Python语言简介"><a href="#Python语言简介" class="headerlink" title="Python语言简介"></a>Python语言简介</h1><p>Python是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。<br>Python的设计哲学是“优雅”、“明确”、“简单”<br>Python是自由软件之一，免费、开源。<br>Python已经被移植到许多平台上。这些平台包括Unix/Linux、Windows、Mac OS。</p>
+<p>Python主页：<a target="_blank" rel="noopener" href="http://www.python.org/">www.python.org</a></p>
+<h2 id="Python集成开发环境"><a href="#Python集成开发环境" class="headerlink" title="Python集成开发环境"></a>Python集成开发环境</h2><p><strong>IDLE</strong>：Python安装包内置开发环境<br><strong>Thonny</strong>：Python IDE for beginners网址是 <a target="_blank" rel="noopener" href="https://thonny.org/">https</a><a target="_blank" rel="noopener" href="https://thonny.org/">://</a><a target="_blank" rel="noopener" href="https://thonny.org/">thonny.org</a><a target="_blank" rel="noopener" href="https://thonny.org/">/</a>（☆本文推荐使用Thonny学习，请点击前方链接进入官网下载）<br><strong>jupyter</strong>：安装Anaconda自带的高级IDE，数据科学家首选开发环境<br><strong>PyCharm</strong> ：由著名的JetBrains公司开发，带有一整套可以帮助用户在使用Python语言开发时提高其效率的工具。程序员的开发环境 </p>
+<h1 id="标识符和变量"><a href="#标识符和变量" class="headerlink" title="标识符和变量"></a>标识符和变量</h1><p>标识符是指用来标识某个实体的一个符号，在不同的应用环境下有不同的含义<br>标识符由字母、下划线和数字组成，且不能以数字开头<br>python中的标识符是区分大小写的，Andy与andy是不同的标识符<br>举三个简单的例子：</p>
+<p>a   |   my_test  |  _123<br>注意：python一些特殊的组合，是所谓的关键字。关键字不允许作为标识符。</p>
+<h2 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h2><p>常量就是不能改变的量，比如常用的数学常数3.14159就是一个常量<br>变量就是程序为了方便地引用内存中的值而为它取的名称。Python变量名是大小写敏感的</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;a=<span class="number">7</span>  <span class="comment">#“=“是赋值号 （此处#为注释，不影响代码运行）</span></span><br><span class="line">&gt;&gt;&gt;a</span><br><span class="line"><span class="number">7</span></span><br></pre></td></tr></table></figure>
+<p>如上图，在Thonny的下半部分区域（Shell）中，在&gt;&gt;&gt;后输入a=7</p>
+<p>7是一个对象，可以通过变量a引用这个对象</p>
+<p>按回车后再输入a，回车，输出7</p>
+<h2 id="id函数"><a href="#id函数" class="headerlink" title="id函数"></a>id函数</h2><p>Python变量有一个非常重要的性质：变量是将名字和对象关联起来。赋值操作并不会实际复制值，它只是为数据对象取个相关的名字。名字是对象的引用而不是对象本身</p>
+<p>id是Python的内置函数，显示对象的地址</p>
+<h2 id="输入及输出函数"><a href="#输入及输出函数" class="headerlink" title="输入及输出函数"></a>输入及输出函数</h2><p>输入函数：input()<br>input()指接受一个输入的数据返回一个字符串，其接受的数据需换行输入</p>
+<p>其中‘9’表示是一个字符串</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;a=<span class="built_in">input</span>()</span><br><span class="line">  <span class="number">9</span></span><br><span class="line">&gt;&gt;&gt;a</span><br><span class="line"> ‘<span class="number">9</span>’</span><br></pre></td></tr></table></figure>
+<p>int()函数指接受一个值（这里来自input（））返回一个可以运算的整数</p>
+<p>其他种类的值可用其他函数运算化。若接受的值并非整数，则int（）报错</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">  <span class="number">9</span></span><br><span class="line">&gt;&gt;&gt;a</span><br><span class="line">  <span class="number">9</span></span><br><span class="line">&gt;&gt;&gt;m,n=<span class="built_in">input</span>(<span class="string">&quot;请输入多个值：&quot;</span>).split() <span class="comment">#split意为对input()注释，指输入值之间以空格隔开</span></span><br><span class="line">请输入多个值：<span class="number">3</span> <span class="number">5</span></span><br><span class="line">&gt;&gt;&gt;m</span><br><span class="line"><span class="string">&#x27;3&#x27;</span></span><br><span class="line">&gt;&gt;&gt;n </span><br><span class="line"><span class="string">&#x27;5&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>输出函数：print()<br>print是输出函数，参数是输出值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; print(<span class="number">3</span>) <span class="comment">#输出1个数字</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line">&gt;&gt;&gt;print(<span class="number">3</span>,<span class="number">7</span>) <span class="comment">#输出2个数字</span></span><br><span class="line"><span class="number">3</span> <span class="number">7</span></span><br><span class="line">&gt;&gt;&gt; b,c=<span class="number">3</span>,<span class="number">4</span> <span class="comment">#输出1个数字，两个变量</span></span><br><span class="line">print(b, c, <span class="number">5</span>)</span><br><span class="line"><span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>每行输出一个值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="number">3</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="number">4</span>)</span><br><span class="line">&gt;&gt;&gt;print(<span class="number">5</span>)</span><br><span class="line"><span class="comment">#用end参数，一行输出三个值（将以下代码复制到Thonny的上半部分，运行观察输出）</span></span><br><span class="line">print(<span class="number">3</span>,end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">print(<span class="number">4</span>,end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">print(<span class="number">5</span>,end=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">夏铭禹</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://qsctech-watercube.github.io/blog/python%E7%AE%80%E4%BB%8B.html">http://qsctech-watercube.github.io/blog/python%E7%AE%80%E4%BB%8B.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://qsctech-watercube.github.io/blog" target="_blank">水立方技术站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/qsctech-watercube.github.io/tags/python/">python</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/7974234FBBEF1AE0149868371CF77551.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/qsctech-watercube.github.io/python%E5%85%A5%E9%97%A8.html"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/7974234FBBEF1AE0149868371CF77551.jpg" onerror="onerror=null;src='/qsctech-watercube.github.io/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">python入门</div></div></a></div><div class="next-post pull-right"><a href="/qsctech-watercube.github.io/%E5%8F%88%E6%98%AF%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9.html"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/%E7%BD%AE%E9%A1%B6%E5%9B%BE.jpg" onerror="onerror=null;src='/qsctech-watercube.github.io/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">又是新的一天</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/qsctech-watercube.github.io/python入门.html" title="python入门"><img class="cover" src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/7974234FBBEF1AE0149868371CF77551.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-27</div><div class="title">python入门</div></div></a></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/qsctech-watercube.github.io/null" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">夏铭禹</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/qsctech-watercube.github.io/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div><div class="card-info-data-item is-center"><a href="/qsctech-watercube.github.io/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BC%80%E5%A7%8B"><span class="toc-number">2.</span> <span class="toc-text">从计算机开始</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA"><span class="toc-number">2.1.</span> <span class="toc-text">计算机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6"><span class="toc-number">2.1.1.</span> <span class="toc-text">硬件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%8D%95%E4%BD%8D"><span class="toc-number">2.2.</span> <span class="toc-text">存储单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.3.</span> <span class="toc-text">操作系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80"><span class="toc-number">2.4.</span> <span class="toc-text">程序设计语言</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Python%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B"><span class="toc-number">3.</span> <span class="toc-text">Python语言简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-number">3.1.</span> <span class="toc-text">Python集成开发环境</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6%E5%92%8C%E5%8F%98%E9%87%8F"><span class="toc-number">4.</span> <span class="toc-text">标识符和变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E5%92%8C%E5%8F%98%E9%87%8F"><span class="toc-number">4.1.</span> <span class="toc-text">常量和变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#id%E5%87%BD%E6%95%B0"><span class="toc-number">4.2.</span> <span class="toc-text">id函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E5%8F%8A%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0"><span class="toc-number">4.3.</span> <span class="toc-text">输入及输出函数</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E8%B0%88InitPieVectTable%E5%87%BD%E6%95%B0.html" title="谈InitPieVectTable()函数"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="谈InitPieVectTable()函数"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E8%B0%88InitPieVectTable%E5%87%BD%E6%95%B0.html" title="谈InitPieVectTable()函数">谈InitPieVectTable()函数</a><time datetime="2020-10-29T12:59:57.000Z" title="发表于 2020-10-29 20:59:57">2020-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%AD%A3%E7%BB%8F%E8%AE%A1%E5%88%92.html" title="正经计划"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="正经计划"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%AD%A3%E7%BB%8F%E8%AE%A1%E5%88%92.html" title="正经计划">正经计划</a><time datetime="2020-10-29T07:33:22.000Z" title="发表于 2020-10-29 15:33:22">2020-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%96%B0%E6%A6%82%E5%BF%B5%E6%A0%A1%E8%BD%A6.html" title="新概念校车"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="新概念校车"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%96%B0%E6%A6%82%E5%BF%B5%E6%A0%A1%E8%BD%A6.html" title="新概念校车">新概念校车</a><time datetime="2020-10-19T01:49:17.000Z" title="发表于 2020-10-19 09:49:17">2020-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B7Openwrt%E4%BD%9C%E8%BD%AF%E8%B7%AF%E7%94%B1.html" title="树莓派3B+刷Openwrt作软路由"><img src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/RaspberryPi.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="树莓派3B+刷Openwrt作软路由"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE3B-%E5%88%B7Openwrt%E4%BD%9C%E8%BD%AF%E8%B7%AF%E7%94%B1.html" title="树莓派3B+刷Openwrt作软路由">树莓派3B+刷Openwrt作软路由</a><time datetime="2020-09-28T02:50:22.000Z" title="发表于 2020-09-28 10:50:22">2020-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qsctech-watercube.github.io/%E5%88%86%E4%BA%ABMacBook%E7%9A%84%E7%BB%88%E7%AB%AF%EF%BC%88Terminal%EF%BC%89%E7%BE%8E%E5%8C%96.html" title="分享MacBook的终端（Terminal）美化"><img src="https://cdn.jsdelivr.net/gh/QSCtech-WaterCube/picbed/925-1.png" onerror="this.onerror=null;this.src='/qsctech-watercube.github.io/img/404.jpg'" alt="分享MacBook的终端（Terminal）美化"/></a><div class="content"><a class="title" href="/qsctech-watercube.github.io/%E5%88%86%E4%BA%ABMacBook%E7%9A%84%E7%BB%88%E7%AB%AF%EF%BC%88Terminal%EF%BC%89%E7%BE%8E%E5%8C%96.html" title="分享MacBook的终端（Terminal）美化">分享MacBook的终端（Terminal）美化</a><time datetime="2020-09-25T02:39:50.000Z" title="发表于 2020-09-25 10:39:50">2020-09-25</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By 夏铭禹</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/qsctech-watercube.github.io/js/utils.js"></script><script src="/qsctech-watercube.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
